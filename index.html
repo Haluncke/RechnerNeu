@@ -29,9 +29,7 @@
       font-weight: bold;
       cursor: pointer;
     }
-    button:hover {
-      background-color: #0056b3;
-    }
+    button:hover { background-color: #0056b3; }
     .result {
       background: #fff;
       padding: 15px;
@@ -42,6 +40,9 @@
 </head>
 <body>
   <h1>Materialrechner</h1>
+
+  <label for="game">Spiel auswählen:</label>
+  <select id="game" onchange="updateProducts()"></select>
 
   <label for="product">Produkt auswählen:</label>
   <select id="product"></select>
@@ -54,41 +55,59 @@
   <div class="result" id="result"></div>
 
   <script>
-    let materials = {};
+    let allData = {};
 
     // Lade die JSON-Datei mit den Rezepten
     fetch('rezepte.json')
       .then(response => response.json())
       .then(data => {
-        materials = data;
-        const select = document.getElementById("product");
+        allData = data;
+        const gameSelect = document.getElementById("game");
 
-        // Dropdown automatisch befüllen
-        for (const key of Object.keys(materials)) {
+        // Spiele automatisch ins Dropdown laden
+        for (const gameName of Object.keys(allData)) {
           const option = document.createElement("option");
-          option.value = key;
-          option.textContent = key.charAt(0).toUpperCase() + key.slice(1);
-          select.appendChild(option);
+          option.value = gameName;
+          option.textContent = gameName;
+          gameSelect.appendChild(option);
         }
+
+        // Nach dem Laden gleich die Produkte des ersten Spiels anzeigen
+        updateProducts();
       })
       .catch(err => {
         document.getElementById("result").innerHTML = "⚠️ Fehler beim Laden der Rezepte.";
         console.error(err);
       });
 
+    function updateProducts() {
+      const game = document.getElementById("game").value;
+      const productSelect = document.getElementById("product");
+      productSelect.innerHTML = "";
+
+      if (!allData[game]) return;
+
+      for (const productName of Object.keys(allData[game])) {
+        const option = document.createElement("option");
+        option.value = productName;
+        option.textContent = productName;
+        productSelect.appendChild(option);
+      }
+    }
+
     function calculate() {
+      const game = document.getElementById("game").value;
       const product = document.getElementById("product").value;
       const quantity = parseInt(document.getElementById("quantity").value);
       const resultDiv = document.getElementById("result");
 
-      if (!materials[product]) {
+      const productMaterials = allData[game]?.[product];
+      if (!productMaterials) {
         resultDiv.innerHTML = "⚠️ Kein Rezept gefunden.";
         return;
       }
 
-      const productMaterials = materials[product];
-      let output = `<h3>Materialbedarf für ${quantity} × ${product}:</h3><ul>`;
-
+      let output = `<h3>${game} – ${quantity} × ${product}:</h3><ul>`;
       for (const [material, amount] of Object.entries(productMaterials)) {
         output += `<li>${material}: ${amount * quantity}</li>`;
       }
