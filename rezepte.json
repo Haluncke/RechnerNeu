@@ -1,25 +1,36 @@
 {
-  "motorteil": {
-    "Aluminium": 12,
-    "Kunststoff": 22,
-    "Kupferdraht": 42
+  "FabrikSim": {
+    "Motorteil": {
+      "Aluminium": 1,
+      "Kunststoff": 2,
+      "Kupferdraht": 4
+    },
+    "Steuerungseinheit": {
+      "Kunststoff": 3,
+      "Kupferdraht": 2,
+      "Platine": 1
+    }
   },
-  "steuerung": {
-    "Kunststoff": 3,
-    "Kupferdraht": 2,
-    "Platine": 1
+  "WeltraumCraft": {
+    "Energiezelle": {
+      "Titan": 2,
+      "Lithium": 1,
+      "Kupferdraht": 3
+    },
+    "Antrieb": {
+      "Stahl": 4,
+      "Kupferdraht": 2,
+      "Keramik": 1
+    }
   },
-  "kabelsatz": {
-    "Kupferdraht": 5,
-    "Kunststoff": 1
-  },
-  "Batterie": {
-    "Kupferdraht": 500,
-    "Kunststoff": 221
-  },
-  "sensor": {
-    "Aluminium": 2,
-    "Platine": 2,
-    "Kabel": 3
+  "MinenManager": {
+    "Bohrer": {
+      "Stahl": 3,
+      "Kunststoff": 1
+    },
+    "Förderband": {
+      "Kunststoff": 2,
+      "Kupferdraht": 1
+    }
   }
 }
