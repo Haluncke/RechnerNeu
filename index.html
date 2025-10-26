@@ -123,7 +123,7 @@ body.dark .result {
         resultDiv.innerHTML = "⚠️ Kein Rezept gefunden.";
         return;
       }
-        function toggleDarkMode() {
+  function toggleDarkMode() {
     const body = document.body;
     const btn = document.getElementById("darkModeBtn");
 
@@ -134,7 +134,8 @@ body.dark .result {
     } else {
       btn.textContent = "🌙 Dark Mode aktivieren";
     }
-          
+  }
+     {     
       let output = `<h3>${game} – ${quantity} × ${product}:</h3><ul>`;
       for (const [material, amount] of Object.entries(productMaterials)) {
         output += `<li>${material}: ${amount * quantity}</li>`;
