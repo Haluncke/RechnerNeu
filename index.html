@@ -36,9 +36,25 @@
       border-radius: 8px;
       margin-top: 20px;
     }
+    body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body.dark select,
+body.dark input,
+body.dark button {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+body.dark .result {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+}
   </style>
 </head>
 <body>
+  <button onclick="toggleDarkMode()" id="darkModeBtn">🌙 Dark Mode aktivieren</button>
   <h1>Materialrechner</h1>
 
   <label for="game">Spiel auswählen:</label>
@@ -55,6 +71,19 @@
   <div class="result" id="result"></div>
 
   <script>
+    <script>
+  function toggleDarkMode() {
+    const body = document.body;
+    const btn = document.getElementById("darkModeBtn");
+
+    body.classList.toggle("dark");
+
+    if (body.classList.contains("dark")) {
+      btn.textContent = "☀️ Light Mode aktivieren";
+    } else {
+      btn.textContent = "🌙 Dark Mode aktivieren";
+    }
+  }
     let allData = {};
 
     // Lade die JSON-Datei mit den Rezepten
