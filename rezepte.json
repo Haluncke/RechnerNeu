@@ -74,7 +74,19 @@
       "Schwefelsäure": 5
     }
   },
-  "WeltraumCraft": {
+  "Arma 3 Waffen": {
+    "Energiezelle": {
+      "Titan": 2,
+      "Lithium": 1,
+      "Kupferdraht": 3
+    },
+    "Antrieb": {
+      "Stahl": 4,
+      "Kupferdraht": 2,
+      "Keramik": 1
+    }
+  },
+    "LS 25": {
     "Energiezelle": {
       "Titan": 2,
       "Lithium": 1,
