@@ -1,8 +1,8 @@
 {
   "motorteil": {
-    "Aluminium": 1,
-    "Kunststoff": 2,
-    "Kupferdraht": 4
+    "Aluminium": 12,
+    "Kunststoff": 22,
+    "Kupferdraht": 42
   },
   "steuerung": {
     "Kunststoff": 3,
