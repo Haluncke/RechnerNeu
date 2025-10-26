@@ -42,12 +42,9 @@
 </head>
 <body>
   <h1>Materialrechner</h1>
+
   <label for="product">Produkt auswählen:</label>
-  <select id="product">
-    <option value="motorteil">Motorteil</option>
-    <option value="steuerung">Steuerungseinheit</option>
-    <option value="kabelsatz">Kabelsatz</option>
-  </select>
+  <select id="product"></select>
 
   <label for="quantity">Anzahl:</label>
   <input type="number" id="quantity" min="1" value="1" />
@@ -57,20 +54,41 @@
   <div class="result" id="result"></div>
 
   <script>
-    const materials = {
-      motorteil: { Aluminium: 1, Kunststoff: 2, Kupferdraht: 4 },
-      steuerung: { Kunststoff: 3, Kupferdraht: 2, Platine: 1 },
-      kabelsatz: { Kupferdraht: 5, Kunststoff: 1 }
-    };
+    let materials = {};
+
+    // Lade die JSON-Datei mit den Rezepten
+    fetch('rezepte.json')
+      .then(response => response.json())
+      .then(data => {
+        materials = data;
+        const select = document.getElementById("product");
+
+        // Dropdown automatisch befüllen
+        for (const key of Object.keys(materials)) {
+          const option = document.createElement("option");
+          option.value = key;
+          option.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+          select.appendChild(option);
+        }
+      })
+      .catch(err => {
+        document.getElementById("result").innerHTML = "⚠️ Fehler beim Laden der Rezepte.";
+        console.error(err);
+      });
 
     function calculate() {
       const product = document.getElementById("product").value;
       const quantity = parseInt(document.getElementById("quantity").value);
       const resultDiv = document.getElementById("result");
 
+      if (!materials[product]) {
+        resultDiv.innerHTML = "⚠️ Kein Rezept gefunden.";
+        return;
+      }
+
       const productMaterials = materials[product];
       let output = `<h3>Materialbedarf für ${quantity} × ${product}:</h3><ul>`;
-      
+
       for (const [material, amount] of Object.entries(productMaterials)) {
         output += `<li>${material}: ${amount * quantity}</li>`;
       }
