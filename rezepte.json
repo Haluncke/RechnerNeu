@@ -5,6 +5,26 @@
       "Kunststoff": 2,
       "Kupferdraht": 4
     },
+    "Getriebeteil": {
+      "Aluminium": 1,
+      "Kunststoff": 2,
+      "Kupferdraht": 4
+    },
+    "Waffenteil": {
+      "Aluminium": 1,
+      "Kunststoff": 2,
+      "Kupferdraht": 4
+    },
+    "Panzerung": {
+      "Aluminium": 1,
+      "Kunststoff": 2,
+      "Kupferdraht": 4
+    },
+    "Motorteil": {
+      "Aluminium": 1,
+      "Kunststoff": 2,
+      "Kupferdraht": 4
+    },
     "Steuerungseinheit": {
       "Kunststoff": 3,
       "Kupferdraht": 2,
