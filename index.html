@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Materialrechner</title>
   <style>
+    body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body.dark select,
+body.dark input,
+body.dark button {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+body.dark .result {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+}
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f9;
@@ -54,22 +69,6 @@
   <button onclick="calculate()">Berechnen</button>
 
   <div class="result" id="result"></div>
-
-  body.dark {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-body.dark select,
-body.dark input,
-body.dark button {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
-  border: 1px solid #444;
-}
-body.dark .result {
-  background-color: #1e1e1e;
-  border: 1px solid #333;
-}
 
 
   <script>
