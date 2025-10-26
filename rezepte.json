@@ -1,9 +1,11 @@
 {
   "Arma 3": {
     "Motorteil": {
-      "Aluminium": 1,
-      "Kunststoff": 2,
-      "Kupferdraht": 4
+      "Motoröl": 10,
+      "Aluminiumgehäuse": 3,
+      "Kunststoff": 35,
+      "Stahl": 40,
+      "Kupferfolie": 20
     },
     "Getriebeteil": {
       "Stahl": 10,
@@ -11,25 +13,65 @@
       "Eisenstangen": 40,
       "Getriebeöl": 20
     },
-    "Waffenteil": {
-      "Aluminium": 1,
-      "Kunststoff": 2,
-      "Kupferdraht": 4
+    "Reifen": {
+      "Gummi": 40,
+      "Stahl": 2,
+      "Aluminium": 40,
+      "Kunststoff": 5
     },
-    "Panzerung": {
-      "Aluminium": 1,
-      "Kunststoff": 2,
-      "Kupferdraht": 4
+    "Autobatterien": {
+      "Aluminiumgehäuse": 10,
+      "Schwefelsäure": 25,
+      "Kunststoff": 40,
+      "Gummi": 5,
+      "Elektrische Teile": 5
     },
-    "Motorteil": {
-      "Aluminium": 1,
-      "Kunststoff": 2,
-      "Kupferdraht": 4
+    "Elektrische Teile": {
+      "Eisenstangen": 10,
+      "Kupferfolie": 25,
+      "Kupferdraht": 40,
+      "Kunststoff": 35,
+      "Gummi": 15,
+      "Aluminiumplatten": 2
     },
-    "Steuerungseinheit": {
-      "Kunststoff": 3,
-      "Kupferdraht": 2,
-      "Platine": 1
+        "Karosserieteil": {
+      "Aluminiumplatten": 50,
+      "Stahlplatten": 10,
+      "Eisenstangen": 25,
+      "Kupferfolie": 15,
+      "Kupferdraht": 5
+    },
+        "Elektronische Teile": {
+      "Eisenstangen": 15,
+      "Kupferfolie": 40,
+      "Kupferdraht": 60,
+      "Kunststoff": 50,
+      "Gummi": 20,
+      "Rubin": 5,
+      "Aluminiumplatten": 4,
+      "Elektrischeteile": 3
+    },
+      "Highspeed Anschluss": {
+      "Goldbarren": 10,
+      "Aluminiumgehäuse": 3,
+      "Kunststoff": 35,
+      "Stahl": 40,
+      "Kupferfolie": 20
+    },
+      "Verstärkte Legierung": {
+      "Aluminiumplatten": 75,
+      "Stahl": 50,
+      "Kobald": 45,
+      "Steinkohle": 25,
+      "Kupferfolie": 60
+    },
+    "Intelligente Beschichtung": {
+      "Elektrische Teile": 10,
+      "Elektronische Teile": 5,
+      "Autobatterien": 5,
+      "Aluminiumgehäuse": 5,
+      "Highspeed Anschlüsse": 10,
+      "Schwefelsäure": 5
     }
   },
   "WeltraumCraft": {
