@@ -14,43 +14,60 @@
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: background-color 0.3s, color 0.3s;
     }
+
     h1 { text-align: center; }
-    select, input, button {
+
+    select, input {
       width: 100%;
       padding: 10px;
       margin: 8px 0;
       border: 1px solid #ccc;
       border-radius: 8px;
     }
-    button {
-      background-color: #007bff;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    button:hover { background-color: #0056b3; }
+
     .result {
       background: #fff;
       padding: 15px;
       border-radius: 8px;
       margin-top: 20px;
+      transition: background 0.3s, color 0.3s;
     }
+
+    /* 🌙 Dark Mode */
     body.dark {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-body.dark select,
-body.dark input,
-body.dark button {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
-  border: 1px solid #444;
-}
-body.dark .result {
-  background-color: #1e1e1e;
-  border: 1px solid #333;
-}
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    body.dark select,
+    body.dark input {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      border: 1px solid #444;
+    }
+
+    body.dark .result {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+    }
+
+    #darkModeBtn {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    #darkModeBtn:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 <body>
@@ -61,28 +78,14 @@ body.dark .result {
   <select id="game" onchange="updateProducts()"></select>
 
   <label for="product">Produkt auswählen:</label>
-  <select id="product"></select>
+  <select id="product" onchange="autoCalculate()"></select>
 
   <label for="quantity">Anzahl:</label>
-  <input type="number" id="quantity" min="1" value="1" />
-
-  <button onclick="calculate()">Berechnen</button>
+  <input type="number" id="quantity" min="1" value="1" oninput="autoCalculate()" />
 
   <div class="result" id="result"></div>
 
   <script>
-  function toggleDarkMode() {
-    const body = document.body;
-    const btn = document.getElementById("darkModeBtn");
-
-    body.classList.toggle("dark");
-
-    if (body.classList.contains("dark")) {
-      btn.textContent = "☀️ Light Mode aktivieren";
-    } else {
-      btn.textContent = "🌙 Dark Mode aktivieren";
-    }
-  }
     let allData = {};
 
     // Lade die JSON-Datei mit den Rezepten
@@ -92,7 +95,6 @@ body.dark .result {
         allData = data;
         const gameSelect = document.getElementById("game");
 
-        // Spiele automatisch ins Dropdown laden
         for (const gameName of Object.keys(allData)) {
           const option = document.createElement("option");
           option.value = gameName;
@@ -100,7 +102,6 @@ body.dark .result {
           gameSelect.appendChild(option);
         }
 
-        // Nach dem Laden gleich die Produkte des ersten Spiels anzeigen
         updateProducts();
       })
       .catch(err => {
@@ -121,13 +122,20 @@ body.dark .result {
         option.textContent = productName;
         productSelect.appendChild(option);
       }
+
+      autoCalculate();
     }
 
-    function calculate() {
+    function autoCalculate() {
       const game = document.getElementById("game").value;
       const product = document.getElementById("product").value;
       const quantity = parseInt(document.getElementById("quantity").value);
       const resultDiv = document.getElementById("result");
+
+      if (!game || !product || !quantity || quantity < 1) {
+        resultDiv.innerHTML = "";
+        return;
+      }
 
       const productMaterials = allData[game]?.[product];
       if (!productMaterials) {
@@ -142,6 +150,18 @@ body.dark .result {
       output += "</ul>";
 
       resultDiv.innerHTML = output;
+    }
+
+    function toggleDarkMode() {
+      const body = document.body;
+      const btn = document.getElementById("darkModeBtn");
+      body.classList.toggle("dark");
+
+      if (body.classList.contains("dark")) {
+        btn.textContent = "☀️ Light Mode aktivieren";
+      } else {
+        btn.textContent = "🌙 Dark Mode aktivieren";
+      }
     }
   </script>
 </body>
