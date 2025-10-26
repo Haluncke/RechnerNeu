@@ -134,8 +134,7 @@ body.dark .result {
     } else {
       btn.textContent = "🌙 Dark Mode aktivieren";
     }
-  }
-
+          
       let output = `<h3>${game} – ${quantity} × ${product}:</h3><ul>`;
       for (const [material, amount] of Object.entries(productMaterials)) {
         output += `<li>${material}: ${amount * quantity}</li>`;
