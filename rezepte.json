@@ -1,1 +1,21 @@
-
+{
+  "motorteil": {
+    "Aluminium": 1,
+    "Kunststoff": 2,
+    "Kupferdraht": 4
+  },
+  "steuerung": {
+    "Kunststoff": 3,
+    "Kupferdraht": 2,
+    "Platine": 1
+  },
+  "kabelsatz": {
+    "Kupferdraht": 5,
+    "Kunststoff": 1
+  },
+  "sensor": {
+    "Aluminium": 2,
+    "Platine": 2,
+    "Kabel": 3
+  }
+}
