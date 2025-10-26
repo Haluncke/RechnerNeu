@@ -54,7 +54,7 @@ body.dark .result {
   </style>
 </head>
 <body>
-  <button onclick="toggleDarkMode()" id="darkModeBtn">🌙 Dark Mode aktivieren</button>
+  <button onclick="toggleDarkMode()" id="darkModeBtn"> Dark Mode aktivieren</button>
   <h1>Materialrechner</h1>
 
   <label for="game">Spiel auswählen:</label>
@@ -71,7 +71,6 @@ body.dark .result {
   <div class="result" id="result"></div>
 
   <script>
-    <script>
   function toggleDarkMode() {
     const body = document.body;
     const btn = document.getElementById("darkModeBtn");
@@ -79,9 +78,9 @@ body.dark .result {
     body.classList.toggle("dark");
 
     if (body.classList.contains("dark")) {
-      btn.textContent = "☀️ Light Mode aktivieren";
+      btn.textContent = " Light Mode aktivieren";
     } else {
-      btn.textContent = "🌙 Dark Mode aktivieren";
+      btn.textContent = " Dark Mode aktivieren";
     }
   }
     let allData = {};
