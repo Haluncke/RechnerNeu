@@ -6,9 +6,10 @@
       "Kupferdraht": 4
     },
     "Getriebeteil": {
-      "Aluminium": 1,
-      "Kunststoff": 2,
-      "Kupferdraht": 4
+      "Stahl": 10,
+      "Stahlplatten": 25,
+      "Eisenstangen": 40,
+      "Getriebeöl": 20
     },
     "Waffenteil": {
       "Aluminium": 1,
