@@ -13,6 +13,11 @@
     "Kupferdraht": 5,
     "Kunststoff": 1
   },
+   },
+  "Batterie": {
+    "Kupferdraht": 500,
+    "Kunststoff": 221
+  },
   "sensor": {
     "Aluminium": 2,
     "Platine": 2,
