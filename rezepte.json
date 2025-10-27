@@ -74,16 +74,47 @@
       "Schwefelsäure": 5
     }
   },
-  "Arma 3 Waffen": {
-    "Energiezelle": {
-      "Titan": 2,
-      "Lithium": 1,
-      "Kupferdraht": 3
+  "Arma 3 Waffen": {    //Ab hier Waffenteile//
+    "Waffenkühlkörper": {
+      "Kupferfolie": 15,
+      "Kunststoff": 25,
+      "Aluminiumplatten": 5,
+      "Gummi": 20,
+      "Aluminiumgehäuse": 4
     },
-    "Antrieb": {
-      "Stahl": 4,
-      "Kupferdraht": 2,
-      "Keramik": 1
+     "Waffenteil": {
+      "Eisenstangen": 5,
+      "Stahl": 5,
+      "Kupferdraht": 10,
+      "Kunststoff": 5,
+      "Gummi": 5,
+      "Aluminiumplatten": 5
+    },
+    "Waffenfeder": {
+      "Eisenstangen": 15,
+      "Stahl": 25,
+      "Kupferdraht": 40
+    },
+    "Waffengriff": {
+      "Aluminiumplatten": 15,
+      "Gummi": 5,
+      "Kunststoff": 5,
+      "Aluminiumgehäuse": 15
+    },
+    "Waffenoptik": {
+      "Kupferdraht": 5,
+      "Kupferfolie": 5,
+      "Aluminiumplatten": 10,
+      "Kunststoff": 5,
+      "Gummi": 5,
+      "Steinkohle": 5,
+      "Braunkohle": 10
+    },
+    "Waffenlauf": {
+      "Aluminiumplatten": 2,
+      "Stahl": 5,
+      "Kupferfolie": 5,
+      "Eisenstangen": 10
     }
   },
     "LS 25": {
