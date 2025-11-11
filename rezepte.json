@@ -86,6 +86,12 @@
       "Schwefelsäure": 1,
       "Reinigungsalkohol": 1
     },
+      "LSD": {
+      "Giftige Frösche": 5,
+      "Salzsäure": 1,
+      "Schwefelsäure": 1,
+      "Reinigungsalkohol": 1
+    },
       "Internes Pulver": {
       "Feingemahlendes Bauxit": 5,
       "Kupferpulver": 5,
@@ -95,7 +101,7 @@
       "Internes Pulver": 2,
       "Zombiefleisch": 5
     },
-      "Keks Orange": {
+      "Keks Orange mehr Erfharung": {
       "Sonderbare Masse": 1,
       "Heroin": 25,
       "Salzsäure": 5,
