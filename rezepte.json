@@ -85,6 +85,39 @@
       "Filterpapier": 1,
       "Schwefelsäure": 1,
       "Reinigungsalkohol": 1
+    },
+      "Internes Pulver": {
+      "Feingemahlendes Bauxit": 5,
+      "Kupferpulver": 5,
+      "Zementsack": 10
+    },
+      "Sonderbare Masse": {
+      "Internes Pulver": 2,
+      "Zombiefleisch": 5
+    },
+      "Keks Orange": {
+      "Sonderbare Masse": 1,
+      "Heroin": 25,
+      "Salzsäure": 5,
+      "Gasflasche Fluor": 2
+    },
+      "Keks Gelb": {
+      "Sonderbare Masse": 1,
+      "Kokain": 40,
+      "Salzsäure": 5,
+      "Gasflasche Fluor": 2
+    },
+      "Keks Grün": {
+      "Sonderbare Masse": 1,
+      "Crystal Meth": 15,
+      "Salzsäure": 5,
+      "Gasflasche Fluor": 2
+    },
+      "Keks Rot": {
+      "Sonderbare Masse": 1,
+      "LSD": 25,
+      "Salzsäure": 5,
+      "Gasflasche Fluor": 2
     }
   },
   "Arma 3 Waffen": {
